@@ -15,4 +15,13 @@
         <sqlFile path="prod/data/ADD_GUEST_USER.sql" relativeToChangelogFile="true" encoding="UTF-8" />
     </changeSet>
 
+    <changeSet id="add_admin_user_record" author="asokolowski">
+        <comment>Add admin from env var</comment>
+        <sqlFile path="prod/data/ADD_ADMIN_USER.sql" relativeToChangelogFile="true" encoding="UTF-8" />
+        <update tableName="account">
+            <column name="password" type="varchar(255)" value="${ADMIN_INIT_PASS}"/>
+            <where>user_name='admin'</where>
+        </update>
+    </changeSet>
+
 </databaseChangeLog>
