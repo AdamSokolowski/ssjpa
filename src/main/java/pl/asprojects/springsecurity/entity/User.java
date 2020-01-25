@@ -2,7 +2,7 @@ package pl.asprojects.springsecurity.entity;
 
 import javax.persistence.*;
 
-@Entity
+@Entity(name="ACCOUNT")
 public class User {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)

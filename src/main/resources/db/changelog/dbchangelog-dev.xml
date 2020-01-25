@@ -7,12 +7,12 @@
 
 
 
-    <changeSet id="init_user_database" author="asokolowski">
-        <comment>Init user database</comment>
-        <sqlFile path="initial/USER.sql" relativeToChangelogFile="true" encoding="UTF-8" />
+    <changeSet id="init_account_table" author="asokolowski">
+        <comment>Init account table</comment>
+        <sqlFile path="initial/ACCOUNT.sql" relativeToChangelogFile="true" encoding="UTF-8" />
     </changeSet>
 
-    <changeSet id="add_guest_user_database" author="asokolowski">
+    <changeSet id="add_guest_account_database" author="asokolowski">
         <comment>Add guest user to database</comment>
         <sqlFile path="data/ADD_GUEST_USER.sql" relativeToChangelogFile="true" encoding="UTF-8" />
     </changeSet>
