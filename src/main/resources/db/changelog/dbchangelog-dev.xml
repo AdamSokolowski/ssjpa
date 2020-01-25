@@ -12,4 +12,9 @@
         <sqlFile path="initial/USER.sql" relativeToChangelogFile="true" encoding="UTF-8" />
     </changeSet>
 
+    <changeSet id="add_guest1_user_database" author="asokolowski">
+        <comment>Add guest user to database</comment>
+        <sqlFile path="data/ADD_GUEST1_USER.sql" relativeToChangelogFile="true" encoding="UTF-8" />
+    </changeSet>
+
 </databaseChangeLog>
