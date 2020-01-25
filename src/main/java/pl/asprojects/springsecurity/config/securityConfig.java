@@ -43,7 +43,11 @@ public class securityConfig extends WebSecurityConfigurerAdapter{
 			.antMatchers("/admin").hasAnyRole("ADMIN")
 			.antMatchers("/user").hasAnyRole("ADMIN", "USER")
 			.antMatchers("/").permitAll()
-			.and().formLogin();
+			.and().formLogin()
+			.and()//enforce https
+			.requiresChannel()
+				.requestMatchers(r -> r.getHeader("X-Forwarded-Proto") != null)
+				.requiresSecure();
 			
 	}
 }
